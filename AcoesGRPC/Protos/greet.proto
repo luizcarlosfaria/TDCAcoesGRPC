@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "AcoesGRPC";
+
+package greet;
+
+// The greeting service definition.
+service Stock {
+  // Sends a greeting
+  rpc Update (StockRequest) returns (StockResponse);
+}
+
+// The request message containing the user's name.
+message StockRequest {
+  string name = 1;
+  float value = 2;
+}
+
+// The response message containing the greetings.
+message StockResponse {
+  string message = 1;
+}
