@@ -12,6 +12,7 @@ pipeline {
         }
 
         stage('Deploy') {
+            agent any
             when {
               expression {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' 
